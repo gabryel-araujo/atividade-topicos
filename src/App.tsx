@@ -1,14 +1,12 @@
-import { useState } from "react";
 import "./App.css";
+import { ViewContextProvier } from "./contexts";
 import { Home } from "./pages/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <ViewContextProvier>
       <Home />
-    </>
+    </ViewContextProvier>
   );
 }
 
