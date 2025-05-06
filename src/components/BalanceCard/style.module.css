@@ -1,0 +1,38 @@
+.arrowDiv {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  background-color: rgb(175, 45, 45);
+}
+
+.green {
+  background-color: rgb(45, 175, 45);
+}
+
+.blue {
+  background-color: rgb(45, 110, 175);
+}
+
+.olive {
+  background-color: rgb(10, 64, 35);
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: gray;
+}
+
+section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
