@@ -7,4 +7,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --red: rgb(175, 45, 45);
+  --green: rgb(45, 175, 45);
+  --blue: rgb(45, 110, 175);
+  --olive: rgb(10, 64, 35);
 }
