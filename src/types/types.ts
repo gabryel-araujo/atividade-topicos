@@ -11,6 +11,33 @@ export const TransactionDict = {
     title: "Saldo",
     color: "blue",
   },
+  card: {
+    title: "Cartão de crédito",
+    color: "olive",
+  },
 };
 
-export type BillType = { title: string; value: number };
+export const categoriesData = [
+  "Salário",
+  "Custos fixos",
+  "Investimento",
+  "Educação",
+  "Lazer",
+  "Transporte",
+  "Outros",
+];
+
+export type Categories =
+  | "Salário"
+  | "Custos fixos"
+  | "Investimento"
+  | "Educação"
+  | "Lazer"
+  | "Transporte"
+  | "Outros";
+
+export type BillType = {
+  title: string;
+  value: number;
+  category: Categories;
+};
