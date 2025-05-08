@@ -3,15 +3,22 @@ import { formatCurrency } from "../../utils/formatCurrency";
 import { Card } from "../Card";
 import styles from "./style.module.css";
 import { ViewContext } from "../../contexts/ViewContext";
+import { ChevronRight } from "lucide-react";
 
 type BalanceCardProps = {
   title: string;
   icon: React.ReactNode;
   type: "balance" | "receipt" | "expense" | "card";
   color: "blue" | "green" | "red" | "olive";
-};
+} & React.ComponentProps<"div">;
 
-export function BalanceCard({ title, icon, color, type }: BalanceCardProps) {
+export function BalanceCard({
+  title,
+  icon,
+  color,
+  type,
+  ...rest
+}: BalanceCardProps) {
   const { view, accountData } = useContext(ViewContext);
 
   const getValue = () => {
@@ -35,10 +42,13 @@ export function BalanceCard({ title, icon, color, type }: BalanceCardProps) {
   };
 
   return (
-    <Card>
+    <Card {...rest}>
       <section>
         <div>
-          <h2 className={styles.title}>{title}</h2>
+          <h2 className={styles.title}>
+            {title}
+            <ChevronRight size={17} />
+          </h2>
           <h3>{formatValue(getValue())}</h3>
         </div>
         <span className={`${styles.arrowDiv} ${styles[color]}`}>{icon}</span>

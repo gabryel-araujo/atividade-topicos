@@ -4,11 +4,11 @@ import { useContext } from "react";
 import { ViewContext } from "../../contexts/ViewContext";
 
 export default function Nav() {
-  const { accountData } = useContext(ViewContext);
+  const { accountData, setScreen } = useContext(ViewContext);
 
   return (
     <div className={styles.nav}>
-      <Coins color="orange" />
+      <Coins color="orange" onClick={() => setScreen("main")} />
       <section>
         <UserCircle color="orange" />
         <p>{accountData.name}</p>
