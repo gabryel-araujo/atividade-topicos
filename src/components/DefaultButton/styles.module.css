@@ -1,0 +1,34 @@
+.button {
+  padding: 1.3rem;
+  border-radius: 1rem;
+  border: 0;
+  background-color: white;
+  box-shadow: 0.9rem 0.3rem 1rem -0.6rem rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  min-width: 15rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  filter: brightness(80%);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.olive {
+  background-color: var(--olive);
+}
