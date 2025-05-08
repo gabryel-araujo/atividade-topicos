@@ -15,7 +15,8 @@ export function Home() {
         {screen === "main" && <MainCards />}
         {(screen === "receipt" ||
           screen === "expense" ||
-          screen === "balance") && <EditTransaction type={screen} />}
+          screen === "balance" ||
+          screen === "card") && <EditTransaction type={screen} />}
       </Container>
     </>
   );
