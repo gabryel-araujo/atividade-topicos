@@ -10,16 +10,21 @@ export function ViewContextProvier({ children }: ViewContextProvierProps) {
   const [view, setView] = useState(true);
   const [screen, setScreen] = useState<Screens>("main");
 
-  const [accountData, setAccountData] = useState<AccountModel>({
-    id: "1",
-    name: "Gabryel",
-    balance: 0,
-    receipts: 0,
-    expenses: 0,
-    card: 0,
-    arrReceipts: [],
-    arrExpenses: [],
-    arrCard: [],
+  const [accountData, setAccountData] = useState<AccountModel>(() => {
+    const dataStorage = localStorage.getItem("user-data");
+    return dataStorage
+      ? JSON.parse(dataStorage)
+      : {
+          id: "1",
+          name: "Usuário",
+          balance: 0,
+          receipts: 0,
+          expenses: 0,
+          card: 0,
+          arrReceipts: [],
+          arrExpenses: [],
+          arrCard: [],
+        };
   });
 
   const newBalance = accountData.arrReceipts.reduce(
@@ -62,6 +67,7 @@ export function ViewContextProvier({ children }: ViewContextProvierProps) {
 
   useEffect(() => {
     console.log(accountData);
+    localStorage.setItem("user-data", JSON.stringify(accountData));
   }, [accountData]);
 
   return (
