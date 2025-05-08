@@ -16,6 +16,10 @@
   color: var(--blue);
 }
 
+.card {
+  color: var(--olive);
+}
+
 .field {
   margin-top: 0.7rem;
   border: 0.1rem solid #434343;
