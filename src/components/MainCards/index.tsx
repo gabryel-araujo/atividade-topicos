@@ -13,6 +13,7 @@ import { BalanceCard } from "../BalanceCard";
 import styles from "./styles.module.css";
 import type { Screens } from "../../models/AccountModel";
 import { Chart } from "../Chart";
+import { BarChart } from "../BarChart";
 
 export function MainCards() {
   const { view, setView, setScreen } = useContext(ViewContext);
@@ -76,7 +77,10 @@ export function MainCards() {
         })}
       </div>
       <h1>Visão Geral</h1>
-      <Chart />
+      <div className={styles.charts}>
+        <Chart />
+        <BarChart />
+      </div>
     </>
   );
 }
