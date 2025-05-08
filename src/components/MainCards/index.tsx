@@ -62,9 +62,10 @@ export function MainCards() {
         )}
       </div>
       <div className={styles.gridContainer}>
-        {cards.map((card) => {
+        {cards.map((card, index) => {
           return (
             <BalanceCard
+              key={index}
               onClick={() => setScreen(card.type as Screens)}
               title={card.title}
               color={card.color}
