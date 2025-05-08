@@ -9,11 +9,15 @@ const initialValue: AccountContextType = {
     receipts: 1,
     expenses: 1,
     card: 1,
-    view: true,
+    arrReceipts: [],
+    arrExpenses: [],
+    arrCard: [],
   },
   setAccountData: () => {},
   view: false,
   setView: () => {},
+  screen: "main",
+  setScreen: () => {},
 };
 
 export const ViewContext = createContext<AccountContextType>(initialValue);
