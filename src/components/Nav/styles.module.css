@@ -9,3 +9,11 @@
   height: 7.8rem;
   padding: 2rem;
 }
+
+.title {
+  color: #f3a634;
+}
+
+.homeSection {
+  cursor: pointer;
+}

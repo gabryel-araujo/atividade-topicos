@@ -8,10 +8,13 @@ export default function Nav() {
 
   return (
     <div className={styles.nav}>
-      <Coins color="orange" onClick={() => setScreen("main")} />
+      <section className={styles.homeSection} onClick={() => setScreen("main")}>
+        <Coins color="orange" />
+        <h1 className={styles.title}>Coin Exchange</h1>
+      </section>
       <section>
         <UserCircle color="orange" />
-        <p>{accountData.name}</p>
+        <h2>{accountData.name}</h2>
       </section>
     </div>
   );
