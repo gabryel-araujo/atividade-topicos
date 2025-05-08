@@ -65,7 +65,7 @@ export function ExpenseChart() {
 
   return (
     <Card>
-      <div id="chartdiv" style={{ width: "100%", height: "50rem" }}></div>
+      <div id="chartdiv" style={{ width: "100%", height: "25rem" }}></div>
     </Card>
   );
 }
