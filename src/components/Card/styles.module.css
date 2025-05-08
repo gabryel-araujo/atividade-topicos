@@ -1,6 +1,16 @@
 .card {
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 0.9rem 0.3rem 1rem -0.6rem rgba(0, 0, 0, 0.45);
+  box-shadow: 0.4rem 0.3rem 1rem -0.6rem rgba(0, 0, 0, 0.45);
   padding: 1.3rem;
+}
+
+/* Computador abaixo */
+@media (min-width: 1024px) {
+  .card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.3rem 1rem -0.6rem rgba(0, 0, 0, 0.45);
+    padding: 1.3rem;
+  }
 }

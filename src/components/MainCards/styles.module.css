@@ -1,7 +1,8 @@
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 1.4rem;
+  width: 100%;
 }
 
 .inline {
@@ -16,5 +17,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    justify-content: center;
   }
 }

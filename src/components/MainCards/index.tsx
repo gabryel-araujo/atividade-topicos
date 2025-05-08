@@ -44,7 +44,7 @@ export function MainCards() {
       icon: <ArrowDown color="white" />,
     },
     {
-      title: "Cartão de Crédito",
+      title: "Cartões",
       color: "olive",
       type: "card",
       icon: <WalletCards color="white" />,

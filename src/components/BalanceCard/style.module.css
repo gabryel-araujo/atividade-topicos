@@ -31,6 +31,8 @@
   display: inline-flex;
   cursor: pointer;
   align-items: center;
+  max-width: 100%;
+  flex: 1;
 }
 
 section {
